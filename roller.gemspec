@@ -2,8 +2,10 @@
 # project in your rails apps through git.
 Gem::Specification.new do |s|
   s.name = "roller"
-  s.summary = "Insert Roller summary."
-  s.description = "Insert Roller description."
-  s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.rdoc"]
   s.version = "0.0.1"
+  s.summary = "Status field management of model."
+  s.description = "It allow to manage next status of model depending from previous value."
+  s.authors = ['Sergey Chipiga']
+  s.email = 'sergey.chipiga@flatstack.com'
+  s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.rdoc"]
 end
