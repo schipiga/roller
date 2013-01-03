@@ -3,9 +3,10 @@
 Gem::Specification.new do |s|
   s.name = "roller"
   s.version = "0.0.1"
-  s.summary = "Status field management of model."
-  s.description = "It allow to manage next status of model depending from previous value."
-  s.authors = ['Sergey Chipiga']
+  s.summary = "Field value management of model."
+  s.description = "It allow to manage a field value of a model depending from its previous value."
+  s.author = 'Sergey Chipiga'
   s.email = 'sergey.chipiga@flatstack.com'
+  s.homepage = 'https://github.com/sergeychipiga/roller'
   s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.rdoc"]
 end
