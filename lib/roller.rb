@@ -1,7 +1,8 @@
 module Roller
 
   def self.included(base)
-    base.extend ClassMethods
+    base.send :extend, ClassMethods
+    base.send :include, InstanceMethods
   end
 
   def ensure_unique(base)
@@ -12,10 +13,14 @@ module Roller
 
   module ClassMethods
     def access_rules(*data)
-      before_update lambda do |m|
-        model = data.first.split('.')
-        data.last[model.first.capitalize.constantize.find(m.status_id_was)[model.last].to_sym].include?(m.status.title.to_sym)
-      end
+      before_update { |i| i.some(*data) }
+    end
+  end
+
+  module InstanceMethods
+    def some(argc, *argv)
+      model = argc.split('.')
+      argv.last[model.first.capitalize.constantize.find(self.status_id_was)[model.last].to_sym].include?(self.status.title.to_sym)
     end
   end
 end
