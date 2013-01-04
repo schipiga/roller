@@ -24,7 +24,7 @@ Usage
 -----
 
 Let's consider simple sample:
-There are models Order and Status (Status has_many :orders and Order belongs_to :status), some statuses with titles "new", "assigned", "blocked", "delayed", "in_work", "completed". And you want order instance can move from "new"-status to "assigned"-status only; just add below code to Order.rb:
+There are models Order and Status (Status has_many :orders and Order belongs_to :status), some statuses with titles "new", "assigned", "blocked", "delayed", "in_work", "completed". And you want order instance can move from "new"-status to "assigned"-status only and etc.; just add below code to Order.rb:
 
 ```ruby
 access_rules "status.title", new: [:assigned],

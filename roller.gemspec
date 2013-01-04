@@ -8,5 +8,5 @@ Gem::Specification.new do |s|
   s.author = 'Sergey Chipiga'
   s.email = 'sergey.chipiga@flatstack.com'
   s.homepage = 'https://github.com/sergeychipiga/roller'
-  s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.rdoc"]
+  s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.md"]
 end
